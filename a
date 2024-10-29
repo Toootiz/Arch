@@ -1,0 +1,29 @@
+[bar/example]
+width = 100%
+height = 27
+background = #222222
+foreground = #FFFFFF
+modules-left = cpu memory
+modules-center = date
+modules-right = network
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+label = CPU: %percentage%%
+
+[module/memory]
+type = internal/memory
+format = <label>
+label = RAM: %used%/%total%
+
+[module/network]
+type = internal/network
+interface = wlan0
+format-connected = <label>
+label-connected =  %essid%
+
+[module/date]
+type = internal/date
+format = <label>
+label = %Y-%m-%d %H:%M:%S
